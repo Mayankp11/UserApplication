@@ -76,13 +76,14 @@ public class ViewUserData extends HttpServlet {
             writer.println("<html><body>");
 			writer.println("<h2>User Data</h2>");
 			writer.println("<table border='1'>");
-			writer.println("<tr><th>First Name</th><th>Last Name</th><th>Username</th></tr>");
+			writer.println("<tr><th>First Name</th><th>Last Name</th><th>Username</th><th>Password</th></tr>");
             
             while (resultSet.next()) {
 				writer.println("<tr>");
 				writer.println("<td>" + resultSet.getString("firstName") + "</td>");
 				writer.println("<td>" + resultSet.getString("lastName") + "</td>");
 				writer.println("<td>" + resultSet.getString("username") + "</td>");
+				writer.println("<td>" + resultSet.getString("password") + "</td>");
 				writer.println("</tr>");
 			}
 
